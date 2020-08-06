@@ -36,7 +36,13 @@ shinyUI(fluidPage(
             h3('Predicted slope: '),
             textOutput('slope'),
             h3('Documentation'),
-            h4('The following applications predicts')
+            p('The following applications predicts the mpg 
+              of a car given the number of cylinders and weight. 
+              The user enters the number of cylinders using a
+              radio button and the weight with a slider.
+              In addition to weight prediction, the app provides
+              the user with a plot of the model, as well as the 
+              parameters (slope and y-intercept).')
         )
     )
 ))
