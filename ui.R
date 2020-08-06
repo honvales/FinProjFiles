@@ -13,7 +13,7 @@ library(shiny)
 shinyUI(fluidPage(
 
     # Application title
-    titlePanel("Predicting MPG vs weight for cars"),
+    titlePanel("Predicting MPG vs weight for cars By Honorio Valdes 08/06/20"),
 
     # Sidebar with a slider input for number of bins
     sidebarLayout(
@@ -24,17 +24,17 @@ shinyUI(fluidPage(
                        ),
             sliderInput('predwt','Pick weight (in thousands of tons) of car',0,10,value=5),
             h3('Predicted MPG: '),
-            textOutput('pred')
+            textOutput('pred'),
+            h3('Predicted y-intercept: '),
+            textOutput('intercept'),
+            h3('Predicted slope: '),
+            textOutput('slope')
         ),
 
         # Show a plot of the generated distribution
         mainPanel(
             h3('MPG vs weight plot for cars'),
             plotOutput("carPlot"),
-            h3('Predicted y-intercept: '),
-            textOutput('intercept'),
-            h3('Predicted slope: '),
-            textOutput('slope'),
             h3('Documentation'),
             p('The following applications predicts the mpg 
               of a car given the number of cylinders and weight. 
